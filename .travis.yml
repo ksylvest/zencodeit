@@ -1,0 +1,7 @@
+---
+rvm:
+- 2.0.0
+script:
+- bundle exec rake db:create db:migrate test:prepare test'
+services:
+  - memcache

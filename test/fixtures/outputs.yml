@@ -1,0 +1,59 @@
+bb_output_webm:
+  video: bb
+  zencoder_id: 870885
+  state: finished
+
+bb_output_mp4:
+  video: bb
+  zencoder_id: 870886
+  state: finished
+
+bb_output_ogg:
+  video: bb
+  zencoder_id: 870887
+  state: finished
+
+ts_output_webm:
+  video: ts
+  zencoder_id: 871104
+  state: finished
+
+ts_output_mp4:
+  video: ts
+  zencoder_id: 871105
+  state: finished
+
+ts_output_ogg:
+  video: ts
+  zencoder_id: 871106
+  state: finished
+
+we_output_webm:
+  video: we
+  zencoder_id: 871122
+  state: finished
+
+we_output_mp4:
+  video: we
+  zencoder_id: 871123
+  state: finished
+
+we_output_ogg:
+  video: we
+  zencoder_id: 871124
+  state: finished
+
+up_output_webm:
+  video: up
+  zencoder_id: 871264
+  state: finished
+
+up_output_mp4:
+  video: up
+  zencoder_id: 871265
+  state: finished
+
+up_output_ogg:
+  video: up
+  zencoder_id: 871266
+  state: finished

@@ -1,0 +1,428 @@
+/* main */
+
+html, body
+{
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+html, body, p, h1, h2, h3, h4, h5, h6
+{
+  font-family: "Droid Sans", "Helvetica", "Verdana", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+html, body, p
+{
+  color: #444444;
+}
+
+h1, h2, h3, h4, h5 h6
+{
+  color: #222222;
+}
+
+
+html, body, p
+{
+  font-size: 14px;
+}
+
+h1
+{
+  font-size: 24px;
+}
+
+h2
+{
+  font-size: 20px;
+}
+
+h3
+{
+  font-size: 16px;
+}
+
+h4
+{
+  font-size: 14px;
+}
+
+h5
+{
+  font-size: 12px;
+}
+
+h6
+{
+  font-size: 10px;
+}
+
+a
+{
+  color: #336699;
+}
+
+img
+{
+  border: none;
+}
+
+a
+{
+  outline: none;
+}
+
+textarea
+{
+  resize: none;
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+}
+
+.shadow
+{
+  box-shadow: 0px 0px 3px #888888;
+  -moz-box-shadow: 0px 0px 3px #888888;
+  -webkit-box-shadow: 0px 0px 3px #888888;
+}
+
+/* layout */
+
+#ribbon
+{
+  position: absolute;
+  top: 0; left: 0;
+}
+
+#main
+{
+  height: 100%;
+  height: auto !important;
+  min-height: 100%;
+  min-width: 960px;
+  background: #222222;
+}
+
+#content
+{
+  clear: both;
+  overflow: auto;
+  color: #444444;
+  padding: 40px 0px;
+  min-width: 960px;
+  background: #FFFFFF;
+}
+
+#header
+{
+  clear: both;
+  overflow: auto;
+  color: #222222;
+  text-shadow: rgba(255, 255, 255, 0.2) 1px 1px 1px;
+  padding: 10px 0px;
+  min-width: 960px;
+  min-height: 60px;
+  background: #226644 asset-data-url("layout/header.png") repeat-x bottom;
+}
+
+#footer
+{
+  clear: both;
+  overflow: auto;
+  color: #FFFFFF;
+  text-shadow: rgba(0, 0, 0, 0.4) -1px -1px 1px;
+  padding: 20px 0px;
+  min-width: 960px;
+  min-height: 60px;
+  background: #222222 asset-data-url("layout/footer.png") repeat-x top;
+}
+
+#flashes
+{
+  font-size: 16px;
+}
+
+#header #logo
+{
+  font-size: 18px;
+  line-height: 20px;
+  float: left;
+}
+
+#header #menu
+{
+  font-size: 18px;
+  line-height: 60px;
+  float: right;
+}
+
+#footer #link
+{
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+#footer #copy
+{
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+
+#header a
+{
+  color: inherit;
+  text-decoration: none;
+  padding: 8px;
+}
+
+#footer a
+{
+  color: inherit;
+  text-decoration: none;
+  padding: 8px;
+}
+
+/* flashes */
+
+.flash
+{
+  color: #222222;
+  text-shadow: rgba(255, 255, 255, 0.4) 1px 1px 1px;
+  line-height: 50px;
+}
+
+.flash .category
+{
+  display: inline;
+}
+
+.flash .message
+{
+  display: inline;
+}
+
+.flash.info
+{
+  background: asset-data-url("flashes/flash.png") 00.0000% 00.0000%;
+}
+
+.flash.error
+{
+  background: asset-data-url("flashes/flash.png") 00.0000% 33.3333%;
+}
+
+.flash.notice
+{
+  background: asset-data-url("flashes/flash.png") 00.0000% 66.6666%;
+}
+
+.flash.warning
+{
+  background: asset-data-url("flashes/flash.png") 00.0000% 99.9999%;
+}
+
+/* grid */
+
+.wrapper
+{
+  width: 960px;
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+.container
+{
+  width: 960px;
+  margin-left : auto;
+  margin-right: auto;
+}
+
+.grid-01, .grid-02, .grid-03, .grid-04, .grid-05, .grid-06, .grid-07, .grid-08, .grid-09, .grid-10, .grid-11, .grid-12
+{
+  float: left;
+  display: inline;
+  position: relative;
+  margin-left:  10px;
+  margin-right: 10px;
+}
+
+.alpha { margin-left:  0px; }
+.omega { margin-right: 0px; }
+
+.grid-01 { width:  60px; }
+.grid-02 { width: 140px; }
+.grid-03 { width: 220px; }
+.grid-04 { width: 300px; }
+.grid-05 { width: 380px; }
+.grid-06 { width: 460px; }
+.grid-07 { width: 540px; }
+.grid-08 { width: 620px; }
+.grid-09 { width: 700px; }
+.grid-10 { width: 780px; }
+.grid-11 { width: 860px; }
+.grid-12 { width: 940px; }
+
+.prefix-01 { padding-left:   80px; }
+.suffix-01 { padding-right:  80px; }
+.prefix-02 { padding-left:  160px; }
+.suffix-02 { padding-right: 160px; }
+.prefix-03 { padding-left:  240px; }
+.suffix-03 { padding-right: 240px; }
+.prefix-04 { padding-left:  320px; }
+.suffix-04 { padding-right: 320px; }
+.prefix-05 { padding-left:  400px; }
+.suffix-05 { padding-right: 400px; }
+.prefix-06 { padding-left:  480px; }
+.suffix-06 { padding-right: 480px; }
+.prefix-07 { padding-left:  560px; }
+.suffix-07 { padding-right: 560px; }
+.prefix-08 { padding-left:  640px; }
+.suffix-08 { padding-right: 640px; }
+.prefix-09 { padding-left:  720px; }
+.suffix-09 { padding-right: 720px; }
+.prefix-10 { padding-left:  800px; }
+.suffix-10 { padding-right: 800px; }
+.prefix-11 { padding-left:  880px; }
+.suffix-11 { padding-right: 880px; }
+
+.clear
+{
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+}
+
+.center  { text-align:  center; }
+.justify { text-align: justify; }
+
+/* icons */
+
+.icon { padding: 0px 0px 0px 64px; }
+.icon.human { background: asset-data-url("icons/human.png") no-repeat; }
+.icon.clone { background: asset-data-url("icons/clone.png") no-repeat; }
+.icon.owner { background: asset-data-url("icons/owner.png") no-repeat; }
+.icon.fault { background: asset-data-url("icons/fault.png") no-repeat; }
+.icon.royal { background: asset-data-url("icons/royal.png") no-repeat; }
+.icon.close { background: asset-data-url("icons/close.png") no-repeat; }
+.icon.legal { background: asset-data-url("icons/legal.png") no-repeat; }
+.icon.buggy { background: asset-data-url("icons/buggy.png") no-repeat; }
+
+/* table */
+
+table
+{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td
+{
+  padding: 10px 20px;
+}
+
+table th
+{
+  padding: 10px 20px;
+}
+
+table .odd
+{
+  background-color: #F4F8F4;
+}
+
+table .even
+{
+  background-color: #FFFFFF;
+}
+
+/* form */
+
+form .input
+{
+  margin: 16px 0px;
+}
+
+form .button
+{
+  margin: 16px 0px;
+}
+
+form .hint
+{
+  display: block;
+  color: #888;
+  margin: 4px 0px;
+  padding: 0px;
+}
+
+form .error
+{
+  display: block;
+  color: #800;
+  margin: 4px 0px;
+  padding: 0px;
+}
+
+form label
+{
+  color: #444;
+  margin: 4px 0px;
+  padding: 0px;
+}
+
+form input[type=text],
+form input[type=password],
+form textarea
+{
+  width: 100%;
+  padding: 8px;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.input .text
+{
+  padding: 0px 20px 0px 0px;
+}
+
+.input .file
+{
+  padding: 0px 0px 0px 0px;
+}
+
+/* layout */
+
+.picture
+{
+  padding: 6px;
+  background: #FFF;
+}
+
+/* video */
+
+.video
+{
+  margin: 16px 0px;
+}
+
+.video a
+{
+  text-decoration: none;
+}
+
+.video .name
+{
+  margin: 8px 0px;
+}
+
+.video .description
+{
+  margin: 8px 0px;
+}

@@ -1,0 +1,11 @@
+defaults: &defaults
+  api_key: <%= ENV['ZENCODER_API_KEY'] %>
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

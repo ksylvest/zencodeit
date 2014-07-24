@@ -1,0 +1,17 @@
+%h1 Account &raquo; Videos
+%table
+  %colgroup{ width: "20%" }
+  %colgroup{ width: "80%" }
+  %colgroup{ width: "0%" }
+  %colgroup{ width: "0%" }
+  %colgroup{ width: "0%" }
+  %colgroup{ width: "0%" }
+    - @videos.each do |video|
+      = content_tag :tr, video, class: cycle('odd','even') do
+        %td= truncate video.name, length: 30
+        %td= truncate video.description, length: 120
+        %td= video.state
+        %td= link_to 'edit', edit_account_video_path(video)
+        %td= link_to 'destroy', account_video_path(video), method: :delete
+%br/
+= link_to 'New', new_account_video_path

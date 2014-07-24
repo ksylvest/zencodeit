@@ -1,0 +1,24 @@
+= form_for [:account, video] do |f|
+  .input
+    = f.label :name, "Name:"
+    .text= f.text_field :name
+    .hint This name will appear under your video.
+    = errors video, :name
+  .input
+    = f.label :description, "Description:"
+    .text= f.text_area :description, size: "40x4"
+    .hint This description will appear under your video
+    = errors video, :description
+  .input
+    = f.label :encoding, "Video:"
+    .file= f.file_field :encoding
+    .hint Almost any format is supported.
+    = errors video, :encoding
+  .input
+    = f.label :preview, "Preview:"
+    .file= f.file_field :preview
+    .hint PNG and JPG are supported.
+    = errors video, :preview
+  .button
+    = f.submit 'Save'
+    = link_to 'Cancel', account_videos_path

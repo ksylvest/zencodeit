@@ -1,0 +1,53 @@
+= Zencodeit
+
+Zencodeit is an open video hosting platform built in Ruby on Rails using Zencoder.
+
+== Requirements
+
+* ruby 2.0.0
+* rails 4.0..0
+
+== Example
+
+== Accounts
+
+* http://zencoder.com
+* http://aws.amazon.com
+* http://dev.twitter.com/apps/new
+* http://developers.facebook.com/setup
+
+== Installation
+
+  git clone git://github.com/ksylvest/zencodeit.git
+
+  cd zencodeit
+
+  bundle install
+
+  rake db:setup
+
+  cp config/application.yml.sample config/application.yml
+  open config/application.yml
+
+  rails s
+
+  open http://localhost:3000/
+
+== Deployment
+
+  gem install heroku
+
+  heroku create
+
+  git push heroku master
+
+  heroku rake db:create
+  heroku rake db:migrate
+
+  heroku restart
+
+  heroku open
+
+== Copyright
+
+Copyright (c) 2010 - 2014 Kevin Sylvestre. See LICENSE for details.

@@ -1,0 +1,11 @@
+.bundle
+.sass*
+.powenv
+config/application.yml
+coverage
+solr
+log/*
+tmp/*
+db/*.sqlite*
+public/assets
+public/system

@@ -1,0 +1,47 @@
+bb:
+  user: kevin
+  name: Big Buck Bunny
+  description: Big Buck Bunny is a comedy about a well-tempered rabbit Big Buck who finds his day spoiled by the rude actions of the forest bullies. In the typical 1950 cartoon tradition Big Buck then prepares for the rodents a comical revenge.
+  state: finished
+  encoding_identifier: e6c33a30-7117-cac9-36aa-815c237437bc
+  encoding_extension: .mov
+  encoding_size: 15936801
+  preview_identifier: 30eb578b-80d7-ea72-ce8c-0085834fcc44
+  preview_extension: .png
+  preview_size: 1527631
+
+ts:
+  user: kevin
+  name: Toy Story 3
+  description: The creators of the beloved Toy Story films re-open the toy box and bring moviegoers back to the delightful world of our favorite gang of toy characters in Toy Story 3. As Andy prepares to depart for college Buzz Woody and the rest of his loyal toys are troubled about their uncertain future.
+  state: finished
+  encoding_identifier: e98864ae-88e2-4a53-6250-4504a12dc502
+  encoding_extension: .mov
+  encoding_size: 15936801
+  preview_identifier: 9b95acb2-8dc2-4e47-d972-c6b32dc15d0e
+  preview_extension: .jpg
+  preview_size: 644069
+
+we:
+  user: kevin
+  name: Wall-E
+  description: The film takes place in the year 2805 seven hundred years after mass consumerism on Earth left the planet covered in trash. In an attempt to resolve the situation humanity evacuated into space on fully automated starliners and left behind an army of trash compactor robots called WALL-E to clean the planet.
+  state: finished
+  encoding_identifier: b157efb7-01fc-1e9a-c80e-e92b691b1742
+  encoding_extension: .mov
+  encoding_size: 15936801
+  preview_identifier: 4f96ead8-155f-a4cb-728a-ad061feb63d2
+  preview_extension: .jpg
+  preview_size: 730852
+
+up:
+  user: kevin
+  name: Up
+  description: Carl Fredricksen a 78 year-old curmudgeonly balloon salesman is not your average hero. When he ties thousands of balloons to his house and flies away to the wilds of South America he finally fulfills his life long dream of adventure.
+  state: finished
+  encoding_identifier: e6c33a30-7117-cac9-36aa-815c237437bc
+  encoding_extension: .mov
+  encoding_size: 15936801
+  preview_identifier: bbd39232-cc2a-6c46-64d6-fb0afba67d08
+  preview_extension: .jpg
+  preview_size: 1010219

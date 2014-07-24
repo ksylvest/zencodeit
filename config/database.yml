@@ -1,0 +1,16 @@
+defaults: &defaults
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+test: &test
+  database: zencodeit_test
+  <<: *defaults
+
+development: &development
+  database: zencodeit_development
+  <<: *defaults
+
+production: &production
+  database: zencodeit_production
+  <<: *defaults

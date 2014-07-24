@@ -1,0 +1,16 @@
+defaults: &defaults
+  facebook:
+    key: <%= ENV['OMNIAUTH_FACEBOOK_KEY'] %>
+    secret: <%= ENV['OMNIAUTH_FACEBOOK_SECRET'] %>
+  twitter:
+    key: <%= ENV['OMNIAUTH_TWITTER_KEY'] %>
+    secret: <%= ENV['OMNIAUTH_TWITTER_SECRET'] %>
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

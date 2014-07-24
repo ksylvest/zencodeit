@@ -1,0 +1,15 @@
+defaults: &defaults
+  access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+  secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+
+development:
+  bucket: zencodeit-development
+  <<: *defaults
+
+test:
+  bucket: zencodeit-test
+  <<: *defaults
+
+production:
+  bucket: zencodeit-production
+  <<: *defaults

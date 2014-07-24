@@ -1,0 +1,19 @@
+bb_job:
+  video: bb
+  zencoder_id: 665791
+  state: finished
+
+ts_job:
+  video: ts
+  zencoder_id: 665965
+  state: finished
+
+we_job:
+  video: we
+  zencoder_id: 665976
+  state: finished
+
+up_job:
+  video: up
+  zencoder_id: 666079
+  state: finished

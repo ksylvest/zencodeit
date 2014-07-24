@@ -1,0 +1,7 @@
+.grid-12
+  .video
+    .shadow.picture
+      = video_tag @video.encodings, poster: @video.preview.url(:poster), class: "sublime", size: "928x522"
+    %h1.name= @video.name
+    %p.description= @video.description
+.clear

@@ -1,0 +1,39 @@
+!!!
+%html
+  %head
+    %meta{ charset: "UTF-8"}
+    %title ZenCodeIt
+    = stylesheet_link_tag "application"
+    = stylesheet_link_tag "//fonts.googleapis.com/css?family=Droid+Sans"
+    = javascript_include_tag "application"
+    = javascript_include_tag "//cdn.sublimevideo.net/js/mhmlwzwe.js"
+    = csrf_meta_tags
+  = errors User.new, :hello
+  %body
+    #main
+      #ribbon
+        = link_to(image_tag(asset_path('ribbon/ribbon.png'), alt: "Fork me on GitHub"), 'http://github.com/ksylvest/zencodeit')
+      #header
+        .wrapper
+          #logo
+            = link_to image_tag(asset_path('logo/logo.png'), alt: 'ZenCodeIt', size: '280x60'), root_path
+          #menu
+            = link_to 'Videos', videos_path
+            = link_to 'Account', account_videos_path
+            = link_to 'Login', new_session_path unless authenticated?
+            = link_to 'Logout', session_path, method: :delete if authenticated?
+      #flashes{ style: 'display:none' }
+        - flash.each do |type, message|
+          = content_tag :div, class: "flash #{type}" do
+            .wrapper
+              %span.message= message
+      #content
+        .wrapper
+          = yield
+      #footer
+        .wrapper
+          #link
+            = link_to 'About', about_path
+            = link_to 'Terms', terms_path
+          #copy
+            Copyright #{Time.now.year} All Rights Reserved
