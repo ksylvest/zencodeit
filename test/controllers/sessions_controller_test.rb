@@ -15,7 +15,7 @@ class SessionsControllerTest < ActionController::TestCase
     request.env["omniauth.auth"] = { uid: @user.uid, provider: @user.provider }
     get :create, provider: "facebook"
 
-    assert_not_nil session[:user][:id]
+    assert_not_nil cookies.signed[:user]
     assert_response :redirect
     assert_redirected_to '/'
   end
@@ -24,7 +24,7 @@ class SessionsControllerTest < ActionController::TestCase
     request.env["omniauth.auth"] = { uid: @user.uid, provider: @user.provider }
     get :create, provider: "twitter"
 
-    assert_not_nil session[:user][:id]
+    assert_not_nil cookies.signed[:user]
     assert_response :redirect
     assert_redirected_to '/'
   end
@@ -32,7 +32,7 @@ class SessionsControllerTest < ActionController::TestCase
   test "should destroy session" do
     delete :destroy
 
-    assert_nil session[:user][:id]
+    assert_nil cookies.signed[:user]
     assert_response :redirect
     assert_redirected_to '/'
   end

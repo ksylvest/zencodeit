@@ -22,7 +22,7 @@ class Account::VideosControllerTest < ActionController::TestCase
   end
 
   test "should get index" do
-    authenticate
+    authenticate(@user)
 
     get :index
     assert_response :success
@@ -30,14 +30,14 @@ class Account::VideosControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
-    authenticate
+    authenticate(@user)
 
     get :new
     assert_response :success
   end
 
   test "should create video" do
-    authenticate
+    authenticate(@user)
 
     assert_difference('Video.count') do
       post :create, video: { name: @video.name, description: @video.description, encoding: @encoding, preview: @preview }
@@ -47,32 +47,30 @@ class Account::VideosControllerTest < ActionController::TestCase
   end
 
   test "should get edit" do
-    authenticate
+    authenticate(@user)
 
     get :edit, id: @video.id
     assert_response :success
   end
 
   test "should update video" do
-    authenticate
+    authenticate(@user)
 
     put :update, id: @video.id, video: { name: @video.name, description: @video.description }
     assert_redirected_to account_videos_path
   end
 
   test "should destroy video" do
-    authenticate
+    authenticate(@user)
 
     delete :destroy, id: @video.id
-
     assert_redirected_to account_videos_path
   end
 
 private
 
-  def authenticate
-    session[:user] = {}
-    session[:user][:id] = @user.id
+  def authenticate(user)
+    cookies.permanent.signed[:user] = user.id
   end
 
 end

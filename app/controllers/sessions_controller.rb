@@ -9,13 +9,8 @@ class SessionsController < ApplicationController
 
   # POST /session
   def create
-    auth = request.env['omniauth.auth']
-    user = User.omniauth(auth)
-
+    authenticate(User.omniauth(request.env['omniauth.auth']))
     flash[:notice] = 'Session successfully created.'
-
-    session[:user] ||= {}
-    session[:user][:id] = user.id
 
     respond_to do |format|
       format.html { redirect_to(restore(default: root_path)) }
@@ -24,10 +19,8 @@ class SessionsController < ApplicationController
 
   # DELETE /session
   def destroy
+    deauthenticate
     flash[:notice] = 'Session successfully destroyed.'
-
-    session[:user] ||= {}
-    session[:user][:id] = nil
 
     respond_to do |format|
       format.html { redirect_to(restore(default: root_path)) }
