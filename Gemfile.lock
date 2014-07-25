@@ -194,7 +194,7 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
-    zencoder (2.4.6)
+    zencoder (2.5.0)
       multi_json
 
 PLATFORMS
