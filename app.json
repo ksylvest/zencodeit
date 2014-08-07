@@ -4,7 +4,7 @@
   "repository": "https://github.com/ksylvest/zencodeit",
   "keywords": ["rails", "ruby", "zencoder"],
   "scripts": { "postdeploy": "bundle exec rake db:setup" },
-  "addons": ["newrelic"]
+  "addons": ["newrelic"],
   "env":
   {
     "RACK_ENV": "production",
