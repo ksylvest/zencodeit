@@ -8,6 +8,14 @@
   {
     "RACK_ENV": "production",
     "RAILS_ENV": "production",
+    "AWS_ACCESS_KEY_ID":
+    {
+      "description": "An AWS Access Key ID"
+    },
+    "AWS_SECRET_ACCESS_KEY":
+    {
+      "description": "An AWS Secret Access Key"
+    },
     "OMNIAUTH_FACEBOOK_KEY":
     {
       "description": "A Facebook Key"
