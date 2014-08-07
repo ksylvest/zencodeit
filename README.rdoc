@@ -48,6 +48,8 @@ Zencodeit is an open video hosting platform built in Ruby on Rails using Zencode
 
   heroku open
 
+{<img src="https://www.herokucdn.com/deploy/button.svg" />}[https://heroku.com/deploy]
+
 == Copyright
 
 Copyright (c) 2010 - 2014 Kevin Sylvestre. See LICENSE for details.

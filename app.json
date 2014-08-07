@@ -1,0 +1,32 @@
+{
+  "name": "Zencodeit",
+  "description": "Zencodeit is an open video hosting platform built in Ruby on Rails using Zencoder.",
+  "repository": "https://github.com/ksylvest/zencodeit",
+  "keywords": ["rails", "ruby", "zencoder"],
+  "scripts": { "postdeploy": "bundle exec rake db:setup" },
+  "env":
+  {
+    "RACK_ENV": "production",
+    "RAILS_ENV": "production",
+    "OMNIAUTH_FACEBOOK_KEY":
+    {
+      "description": "A Facebook Key"
+    },
+    "OMNIAUTH_FACEBOOK_SECRET":
+    {
+      "description": "A Facebook Secret"
+    },
+    "OMNIAUTH_TWITTER_KEY":
+    {
+      "description": "A Twitter Key"
+    },
+    "OMNIAUTH_TWITTER_SECRET":
+    {
+      "description": "A Twitter Secret"
+    },
+    "ZENCODER_API_KEY":
+    {
+      "description": "A Zencoder API Key"
+    }
+  }
+}
