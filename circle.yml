@@ -3,3 +3,6 @@ deployment:
     branch: master
     heroku:
       appname: zencodeit
+machine:
+  ruby:
+    version: 2.1.5
