@@ -1,11 +1,14 @@
 source 'https://rubygems.org'
 
-ruby '2.1.5'
+ruby '2.5.0'
 
-gem 'rails', '4.1.7'
+gem 'rails', '5.1.4'
+gem 'responders'
 
-gem 'pg'
-gem 'unicorn'
+gem 'rails-controller-testing'
+
+gem 'pg', '0.21.0'
+gem 'puma'
 
 gem 'haml-rails'
 gem 'jquery-rails'
@@ -18,19 +21,17 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 
-gem 'sass-rails', '4.0.3'
-gem 'coffee-rails', '4.0.1'
+gem 'sass-rails'
+gem 'coffee-rails'
 
 gem 'uglifier'
 gem 'bourbon'
 
 gem 'figaro'
 
-group :test do
-  gem 'mocha', require: false
-end
+gem 'listen'
 
-group :production do
-  gem 'newrelic_rpm'
-  gem 'rails_12factor'
-end
+gem 'mocha', group: :test
+gem 'newrelic_rpm', group: :production
+
+gem 'byebug'

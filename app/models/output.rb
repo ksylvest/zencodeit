@@ -5,9 +5,9 @@ class Output < ActiveRecord::Base
   validates_uniqueness_of :zencoder_id
 
   def refresh
-    response = Zencoder::Output.progress(self.zencoder_id)
+    response = Zencoder::Output.progress(zencoder_id)
     self.state = response.success? ? response.body['state'] : 'failed'
-    return response
+    response
   end
 
 end

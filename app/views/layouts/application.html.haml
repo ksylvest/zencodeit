@@ -12,11 +12,11 @@
   %body
     #main
       #ribbon
-        = link_to(image_tag(asset_path('ribbon/ribbon.png'), alt: "Fork me on GitHub"), 'http://github.com/ksylvest/zencodeit')
+        = link_to(image_tag('ribbon/ribbon.png', alt: "Fork me on GitHub"), 'http://github.com/ksylvest/zencodeit')
       #header
         .wrapper
           #logo
-            = link_to image_tag(asset_path('logo/logo.png'), alt: 'ZenCodeIt', size: '280x60'), root_path
+            = link_to image_tag('logo/logo.png', alt: 'ZenCodeIt', size: '280x60'), root_path
           #menu
             = link_to 'Videos', videos_path
             = link_to 'Account', account_videos_path

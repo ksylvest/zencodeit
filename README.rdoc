@@ -4,8 +4,8 @@ Zencodeit is an open video hosting platform built in Ruby on Rails using Zencode
 
 == Requirements
 
-* ruby 2.1.2
-* rails 4.1.4
+* Ruby 2.5.0
+* Rails 5.1.4
 
 == Example
 
@@ -52,4 +52,4 @@ Zencodeit is an open video hosting platform built in Ruby on Rails using Zencode
 
 == Copyright
 
-Copyright (c) 2010 - 2014 Kevin Sylvestre. See LICENSE for details.
+Copyright (c) 2010 - 2018 Kevin Sylvestre. See LICENSE for details.

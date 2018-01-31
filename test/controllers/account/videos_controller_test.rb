@@ -6,8 +6,8 @@ class Account::VideosControllerTest < ActionController::TestCase
     @user = users(:kevin)
     @video = videos(:bb)
 
-    @encoding = fixture_file_upload("/videos/encoding.mov")
-    @preview = fixture_file_upload("/videos/preview.png")
+    @encoding = fixture_file_upload('/videos/encoding.mov')
+    @preview = fixture_file_upload('/videos/preview.png')
 
     Video.any_instance.stubs(:zencodeit).returns({})
 
@@ -16,12 +16,12 @@ class Account::VideosControllerTest < ActionController::TestCase
     Attached.mock!
   end
 
-  test "requires authentication" do
+  test 'requires authentication' do
     get :index
     assert_redirected_to new_session_path
   end
 
-  test "should get index" do
+  test 'should get index' do
     authenticate(@user)
 
     get :index
@@ -29,41 +29,41 @@ class Account::VideosControllerTest < ActionController::TestCase
     assert_not_nil assigns(:videos)
   end
 
-  test "should get new" do
+  test 'should get new' do
     authenticate(@user)
 
     get :new
     assert_response :success
   end
 
-  test "should create video" do
+  test 'should create video' do
     authenticate(@user)
 
     assert_difference('Video.count') do
-      post :create, video: { name: @video.name, description: @video.description, encoding: @encoding, preview: @preview }
+      post :create, params: { video: { name: @video.name, description: @video.description, encoding: @encoding, preview: @preview } }
     end
 
     assert_redirected_to account_videos_path
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     authenticate(@user)
 
-    get :edit, id: @video.id
+    get :edit, params: { id: @video.id }
     assert_response :success
   end
 
-  test "should update video" do
+  test 'should update video' do
     authenticate(@user)
 
-    put :update, id: @video.id, video: { name: @video.name, description: @video.description }
+    put :update, params: { id: @video.id, video: { name: @video.name, description: @video.description } }
     assert_redirected_to account_videos_path
   end
 
-  test "should destroy video" do
+  test 'should destroy video' do
     authenticate(@user)
 
-    delete :destroy, id: @video.id
+    delete :destroy, params: { id: @video.id }
     assert_redirected_to account_videos_path
   end
 

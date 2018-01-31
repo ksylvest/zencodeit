@@ -22,7 +22,7 @@ class VideosController < ApplicationController
     @job = Job.find_by!(zencoder_id: params[:job][:id])
     @output = Output.find_by!(zencoder_id: params[:output][:id])
 
-    if @job and @output
+    if @job && @output
       @video = @job.video || @output.video
       @video.refresh(@job, @output)
     end

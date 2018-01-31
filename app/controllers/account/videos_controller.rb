@@ -1,6 +1,6 @@
 class Account::VideosController < ApplicationController
 
-  before_filter :authenticate!
+  before_action :authenticate!
 
   respond_to :html
 

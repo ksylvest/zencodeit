@@ -5,9 +5,9 @@ class Job < ActiveRecord::Base
   validates_uniqueness_of :zencoder_id
 
   def refresh
-    response = Zencoder::Job.details(self.zencoder_id)
+    response = Zencoder::Job.details(zencoder_id)
     self.state = response.success? ? response.body['job']['state'] : 'failed'
-    return response
+    response
   end
 
 end

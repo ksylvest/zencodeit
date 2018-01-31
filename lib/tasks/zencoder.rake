@@ -2,7 +2,7 @@ require 'zencoder'
 
 namespace :zencoder do
 
-  desc "Refresh zencoder."
+  desc 'refresh jobs, outputs, videos within zencoder'
   task refresh: :environment do
 
     # Refresh jobs.

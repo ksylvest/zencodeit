@@ -7,19 +7,19 @@ class OutputTest < ActiveSupport::TestCase
     @failed = Zencoder::Response.new(code: 200, body: { 'state' => 'failed' })
   end
 
-  test "refresh success" do
-    Zencoder::Output.stubs(:progress).returns(@finished)
-
+  test 'refresh success' do
     Output.all.each do |output|
+      Zencoder::Output.stubs(:progress).with(output.zencoder_id).returns(@finished)
+
       output.refresh
       assert_equal output.state, 'finished'
     end
   end
 
-  test "refresh failure" do
-    Zencoder::Output.stubs(:progress).returns(@failed)
-
+  test 'refresh failure' do
     Output.all.each do |output|
+      Zencoder::Output.stubs(:progress).with(output.zencoder_id).returns(@failed)
+
       output.refresh
       assert_equal output.state, 'failed'
     end
