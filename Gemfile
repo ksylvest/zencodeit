@@ -2,12 +2,12 @@ source 'https://rubygems.org'
 
 ruby '2.5.0'
 
-gem 'rails', '5.1.4'
+gem 'rails', '5.1.5'
 gem 'responders'
 
 gem 'rails-controller-testing'
 
-gem 'pg', '0.21.0'
+gem 'pg'
 gem 'puma'
 
 gem 'haml-rails'
